@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TPLSample.WebService/obj
+/TPLSample.WPF/.vs/TPLSample.WPF/v16
+/TPLSample.WPF/TPLSample.WPF/bin/Debug/netcoreapp3.1
+/TPLSample.WPF/TPLSample.WPF/obj
+/TPLSample.WebService/bin/Debug/netcoreapp3.1
