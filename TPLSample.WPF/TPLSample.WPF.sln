@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLSample.WPF", "TPLSample.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLSample.WebService", "..\TPLSample.WebService\TPLSample.WebService.csproj", "{5395397E-48DD-4F82-B907-7D7A788FF807}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mizan.Covid19.Library", "Mizan.Covid19.Library\Mizan.Covid19.Library.csproj", "{4941342D-FA8B-4EB2-B939-A455EA4AA0AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5395397E-48DD-4F82-B907-7D7A788FF807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5395397E-48DD-4F82-B907-7D7A788FF807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5395397E-48DD-4F82-B907-7D7A788FF807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4941342D-FA8B-4EB2-B939-A455EA4AA0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4941342D-FA8B-4EB2-B939-A455EA4AA0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4941342D-FA8B-4EB2-B939-A455EA4AA0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4941342D-FA8B-4EB2-B939-A455EA4AA0AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

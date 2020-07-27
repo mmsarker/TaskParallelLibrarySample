@@ -6,7 +6,75 @@
         xmlns:local="clr-namespace:TPLSample.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Padding="5" x:Name="StocksStatus">No data loaded</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar x:Name="Progress" Width="200" Height="15" Visibility="Hidden"></ProgressBar>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Padding="5">
+                    Mizanur Rahman Sarker
+                </TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+        <Grid Margin="5" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Padding="5" Grid.Column="0">
+                    <GroupBox.Header>All Countries</GroupBox.Header>
+                    <ListBox x:Name="CountryListBox" MouseDoubleClick="CountryListBox_MouseDoubleClick"></ListBox>
+                </GroupBox>
+                <GroupBox Padding="5" Grid.Column="1">
+                    <GroupBox.Header>Selected Countries</GroupBox.Header>
+                    <ListBox x:Name="SelectedCountryListBox"></ListBox>
+                </GroupBox>
+                
+                    <Button x:Name="ButtonLoadCountry1" Click="ButtonLoadCountry_Click" Content="Load Countries" Height="50" Grid.Column="2" Margin="10,40,30,40"></Button>
+                
+            </Grid>
+            <!--<GroupBox>
+                <GroupBox.Header>Search Here</GroupBox.Header>-->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="SummaryButton" Grid.Column="0" Content="Summary" Click="Button_Click"></Button>
+                <Button x:Name="LoadDataByCountryButton" Grid.Column="1" Content="By Country" Click="ButtonLoadByCountry_Click"></Button>
+                <Button x:Name="LoadDataByCountryButton1" Grid.Column="2" Content="Live" Click="ButtonLoadByCountry_Click"></Button>
+
+            </Grid>
+            <!--</GroupBox>-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="350" />
+                </Grid.ColumnDefinitions>
+                <GroupBox Padding="5" Grid.Column="0">
+                    <GroupBox.Header>Data</GroupBox.Header>
+                    <DataGrid x:Name="DataGrid1"></DataGrid>
+                </GroupBox>
+                <GroupBox Padding="5" Grid.Column="1">
+                    <GroupBox.Header>Notes</GroupBox.Header>
+                    <TextBox x:Name="Notes" Padding="5" AcceptsReturn="True" TextWrapping="Wrap" />
+                </GroupBox>
+            </Grid>
+        </Grid>
+
+    </DockPanel>
 </Window>
