@@ -1,4 +1,5 @@
 ﻿using Mizan.Covid19.Library;
+using Mizan.Covid19.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,18 +31,28 @@ namespace TPLSample.WPF
         {
             try
             {
-
+                this.DataGrid1.ItemsSource = new List<CountrySummary>();
                 this.Progress.Visibility = Visibility.Visible;
                 this.Progress.IsIndeterminate = true;
                 var covid19ApiClient = new Covid19ApClient();
-                //var summary = await covid19ApiAdapter.GetSummaryAsync();
-                //var summary = covid19ApiAdapter.GetSummary();
-                //this.DataGrid1.ItemsSource = summary.Countries;
+                //var summary = await covid19ApiClient.GetSummaryAsync();
 
-                var countries = await covid19ApiClient.GetCountryDataAsync();
-                this.CountryListBox.ItemsSource = countries;
-                this.CountryListBox.DisplayMemberPath = "Country";                
-                //this.DataGrid1.ItemsSource = countries;
+                await Task.Run(() =>
+                {
+                    var summary = covid19ApiClient.GetSummary();                    
+                    return summary.Countries;
+                    
+
+                }).ContinueWith(async (continuationTask) =>
+               {
+                   var countries = await continuationTask;
+                   Dispatcher.Invoke(() =>
+                   {
+                       this.DataGrid1.ItemsSource = countries;
+                   });
+               }, TaskContinuationOptions.OnlyOnRanToCompletion);
+
+                this.Status.Text = "Completed";
             }
             catch (Exception)
             {
@@ -50,27 +61,33 @@ namespace TPLSample.WPF
             }
 
             this.Progress.Visibility = Visibility.Hidden;
-        }        
+        }
 
         private void CountryListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
+
         }
 
         private async void ButtonLoadCountry_Click(object sender, RoutedEventArgs e)
         {
+            LoadCountries();
+        }
 
+
+        private async void LoadCountries()
+        {
+            this.CountryListBox.ItemsSource = new List<CountryData>();
             this.Progress.Visibility = Visibility.Visible;
             this.Progress.IsIndeterminate = true;
-            var covid19ApiClient = new Covid19ApClient();
-            //var summary = await covid19ApiAdapter.GetSummaryAsync();
-            //var summary = covid19ApiAdapter.GetSummary();
-            //this.DataGrid1.ItemsSource = summary.Countries;
 
+            var covid19ApiClient = new Covid19ApClient();
             var countries = await covid19ApiClient.GetCountryDataAsync();
             this.CountryListBox.ItemsSource = countries;
             this.CountryListBox.DisplayMemberPath = "Country";
+
+            this.Progress.Visibility = Visibility.Hidden;
         }
+
         private async void ButtonLoadByCountry_Click(object sender, RoutedEventArgs e)
         {
 
