@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Mizan.Covid19.Library
@@ -16,7 +17,7 @@ namespace Mizan.Covid19.Library
         }
 
         public Covid19Summary GetSummary()
-        {
+        {            
             return GetData<Covid19Summary>(ApiURL.SummaryUrl);
         }
 
@@ -32,8 +33,8 @@ namespace Mizan.Covid19.Library
 
         public T GetData<T>(string url)
         {
-            WebClient httpClient = new WebClient();
-            var result = httpClient.DownloadString(url);
+            WebClient webClient = new WebClient();
+            var result = webClient.DownloadString(url);
             var covid19Summary = JsonConvert.DeserializeObject<T>(result);
             return covid19Summary;
         }

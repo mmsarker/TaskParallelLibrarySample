@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLSample.WPF", "TPLSample.WPF\TPLSample.WPF.csproj", "{1C4E3DDE-9B1F-47A5-ACB2-5C3C8432A555}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPLSample.WPF", "TPLSample.WPF\TPLSample.WPF.csproj", "{1C4E3DDE-9B1F-47A5-ACB2-5C3C8432A555}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLSample.WebService", "..\TPLSample.WebService\TPLSample.WebService.csproj", "{5395397E-48DD-4F82-B907-7D7A788FF807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPLSample.WebService", "TPLSample.WebService\TPLSample.WebService.csproj", "{5395397E-48DD-4F82-B907-7D7A788FF807}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mizan.Covid19.Library", "Mizan.Covid19.Library\Mizan.Covid19.Library.csproj", "{4941342D-FA8B-4EB2-B939-A455EA4AA0AB}"
 EndProject

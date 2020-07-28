@@ -16,10 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TPLSample.WPF
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+{    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -31,28 +28,16 @@ namespace TPLSample.WPF
         {
             try
             {
+                this.Status.Text = "Stat";
                 this.DataGrid1.ItemsSource = new List<CountrySummary>();
                 this.Progress.Visibility = Visibility.Visible;
                 this.Progress.IsIndeterminate = true;
                 var covid19ApiClient = new Covid19ApClient();
-                //var summary = await covid19ApiClient.GetSummaryAsync();
+                
 
-                await Task.Run(() =>
-                {
-                    var summary = covid19ApiClient.GetSummary();                    
-                    return summary.Countries;
-                    
 
-                }).ContinueWith(async (continuationTask) =>
-               {
-                   var countries = await continuationTask;
-                   Dispatcher.Invoke(() =>
-                   {
-                       this.DataGrid1.ItemsSource = countries;
-                   });
-               }, TaskContinuationOptions.OnlyOnRanToCompletion);
+                //var summary = covid19ApiClient.GetSummary();                
 
-                this.Status.Text = "Completed";
             }
             catch (Exception)
             {

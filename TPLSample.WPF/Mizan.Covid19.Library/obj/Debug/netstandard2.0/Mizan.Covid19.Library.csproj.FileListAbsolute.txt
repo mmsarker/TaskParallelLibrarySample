@@ -1,8 +1,0 @@
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\bin\Debug\netstandard2.0\Mizan.Covid19.Library.deps.json
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\bin\Debug\netstandard2.0\Mizan.Covid19.Library.dll
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\obj\Debug\netstandard2.0\Mizan.Covid19.Library.csprojAssemblyReference.cache
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\obj\Debug\netstandard2.0\Mizan.Covid19.Library.AssemblyInfoInputs.cache
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\obj\Debug\netstandard2.0\Mizan.Covid19.Library.AssemblyInfo.cs
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\bin\Debug\netstandard2.0\Mizan.Covid19.Library.pdb
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\obj\Debug\netstandard2.0\Mizan.Covid19.Library.dll
-F:\mizan_github_repo\TaskParallelLibrarySample\TPLSample.WPF\Mizan.Covid19.Library\obj\Debug\netstandard2.0\Mizan.Covid19.Library.pdb
