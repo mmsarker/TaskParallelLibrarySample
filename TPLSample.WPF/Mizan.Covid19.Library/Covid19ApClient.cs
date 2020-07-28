@@ -30,7 +30,6 @@ namespace Mizan.Covid19.Library
             return await GetDataAsync<List<DaywiseCase>>(ApiURL.GetDaywiseAllCasesUrl(country));
         }        
 
-
         public T GetData<T>(string url)
         {
             WebClient httpClient = new WebClient();
